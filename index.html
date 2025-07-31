@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=VT323&display=swap" rel="stylesheet">
     <style>
         /* * Custom styles using the new color palette.
-         * #3B3B1A - Page Background
-         * #8A784E - Main Container Background
+         * #2A3663 - Page Background
+         * GIF - Main Container Background
          * #AEC8A4 - Content Area Background
          * #E7EFC7 - Text / Light Accents
         */
         body {
-            background-color: #3B3B1A; /* Dark olive page background */
+            background-color: #2A3663; /* Dark blue page background */
             font-family: 'Inter', sans-serif;
             color: #E7EFC7;
         }
@@ -31,20 +31,22 @@
             text-decoration: underline;
         }
         a:hover {
-            color: #f3f7e9;
+            color: #ffffff;
         }
-        /* Main container has the brown background */
+        /* Main container has the GIF background */
         .main-container {
-            background-color: #8A784E;
+            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXViMDFuNzJwMHl6bXljbjJoaTkzb3IzY25jYXpkZDdsdDE1aW82dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OK5LK5zLFfdm/giphy.gif');
+            background-size: cover;
+            background-position: center;
         }
         /* Adapting the classic "inset" border effect for the new theme */
         .border-inset {
             border: 2px solid;
-            border-color: #3B3B1A #c5bba4 #c5bba4 #3B3B1A;
+            border-color: #1a203c #6f7bab #6f7bab #1a203c;
         }
         .border-outset {
             border: 2px solid;
-            border-color: #c5bba4 #3B3B1A #3B3B1A #c5bba4;
+            border-color: #6f7bab #1a203c #1a203c #6f7bab;
         }
         .content-area {
             background-color: #AEC8A4;
@@ -65,7 +67,7 @@
     <div class="max-w-6xl mx-auto border-inset p-4 main-container">
 
         <!-- Header Section -->
-        <header class="border-outset p-4 mb-8 text-center flex justify-center items-center gap-4">
+        <header class="border-outset p-4 mb-8 text-center flex justify-center items-center gap-4 bg-[#2A3663]/50 backdrop-blur-sm rounded-md">
             <!-- Left pinetree SVG -->
             <svg class="w-12 h-12 text-[#E7EFC7]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 60V12M32 12L44 24M32 12L20 24M40 34L52 42M40 34L28 30M24 34L12 42M24 34L36 30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +85,7 @@
         <div class="flex flex-col md:flex-row gap-8">
 
             <!-- Sidebar Navigation -->
-            <nav class="md:w-1/4 border-inset p-4 h-fit">
+            <nav class="md:w-1/4 border-inset p-4 h-fit bg-[#2A3663]/50 backdrop-blur-sm rounded-md">
                 <h2 class="font-bold text-2xl mb-4 border-b-2 border-[#E7EFC7] pb-2 font-pixel text-[#E7EFC7]">NAVIGATE</h2>
                 <ul class="space-y-4 text-lg">
                     <li><a href="index.html" class="font-bold">> home</a></li>
@@ -92,18 +94,23 @@
                     <li><a href="links.html">> cool links</a></li>
                     <li><a href="games.html">> games</a></li>
                     <li><a href="about.html">> about</a></li>
-                    <li><a href="guestbook.html">> sign the guestbook</a></li>
                 </ul>
 
                 <!-- Link to Us Button -->
                 <div class="mt-8 pt-4 border-t-2 border-[#E7EFC7]">
                      <h3 class="font-pixel text-xl text-center mb-2 text-[#E7EFC7]">Link to Us!</h3>
-                     <img src="https://placehold.co/88x31/E7EFC7/3B3B1A?text=Cabin+Info" alt="Link to Cabin Info" class="mx-auto border-outset">
+                     <img src="https://placehold.co/88x31/E7EFC7/2A3663?text=Cabin+Info" alt="Link to Cabin Info" class="mx-auto border-outset">
+                </div>
+
+                <!-- Guestbook Widget -->
+                <div class="mt-8 pt-4 border-t-2 border-[#E7EFC7] text-center">
+                    <a href="http://www.smartgb.com" target="_blank"><img alt="Free Guestbook" border="0" src="http://extras.smartgb.com/b/logo3_88_31.gif" width="88" height="31" class="mx-auto"></a><br>
+                    <a href="http://users.smartgb.com/g/g.php?a=s&i=g19-02375-73" target="_blank">My Guestbook</a>
                 </div>
             </nav>
 
             <!-- Main Content Area - Now for Blog/Updates -->
-            <main class="flex-1 border-inset p-6 content-area">
+            <main class="flex-1 border-inset p-6 content-area rounded-md">
                 
                 <!-- Blog Post Article -->
                 <article class="mb-8">
@@ -131,7 +138,7 @@
         </div>
 
         <!-- Footer with Webring and Visitor Counter -->
-        <footer class="text-center mt-8 p-4 border-outset">
+        <footer class="text-center mt-8 p-4 border-outset bg-[#2A3663]/50 backdrop-blur-sm rounded-md">
             <!-- Webring Section -->
             <div class="mb-6 border-inset p-3">
                 <h3 class="font-pixel text-xl text-[#E7EFC7]">~*~ Join Our Webring ~*~</h3>
