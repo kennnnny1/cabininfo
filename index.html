@@ -12,64 +12,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=VT323&display=swap" rel="stylesheet">
     <style>
         /* * Custom styles using the new color palette.
-         * #E7EFC7 - Background
-         * #AEC8A4 - Mid-tone Green
-         * #8A784E - Brown/Tan Accent
-         * #3B3B1A - Dark Olive Text/Borders
+         * #3B3B1A - Page Background
+         * #8A784E - Main Container Background
+         * #AEC8A4 - Content Area Background
+         * #E7EFC7 - Text / Light Accents
         */
         body {
-            background-color: #E7EFC7;
+            background-color: #3B3B1A; /* Dark olive page background */
             font-family: 'Inter', sans-serif;
-            color: #3B3B1A;
+            color: #E7EFC7;
         }
         .font-pixel {
             font-family: 'VT323', monospace;
         }
         /* Updated hyperlink colors for the new theme */
         a {
-            color: #8A784E;
+            color: #E7EFC7;
             text-decoration: underline;
         }
         a:hover {
-            color: #3B3B1A;
+            color: #f3f7e9;
         }
-        /* Adapting the classic "inset" border effect for the light theme */
+        /* Main container has the brown background */
+        .main-container {
+            background-color: #8A784E;
+        }
+        /* Adapting the classic "inset" border effect for the new theme */
         .border-inset {
             border: 2px solid;
-            border-color: #8A784E #FFFFFF #FFFFFF #8A784E;
-            background-color: #E7EFC7;
+            border-color: #3B3B1A #c5bba4 #c5bba4 #3B3B1A;
         }
         .border-outset {
             border: 2px solid;
-            border-color: #FFFFFF #8A784E #8A784E #FFFFFF;
+            border-color: #c5bba4 #3B3B1A #3B3B1A #c5bba4;
         }
         .content-area {
-            background-color: #f3f7e9; /* A slightly lighter shade for content */
+            background-color: #AEC8A4;
             color: #3B3B1A;
+        }
+        .content-area a {
+            color: #3B3B1A;
+            font-weight: bold;
+        }
+        .content-area a:hover {
+            color: #000000;
         }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
     <!-- Main container for the entire page -->
-    <div class="max-w-6xl mx-auto border-inset p-4">
+    <div class="max-w-6xl mx-auto border-inset p-4 main-container">
 
         <!-- Header Section -->
         <header class="border-outset p-4 mb-8 text-center flex justify-center items-center gap-4">
             <!-- Left pinetree SVG -->
-            <svg class="w-12 h-12 text-[#3B3B1A]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L6 12H10V22H14V12H18L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10 12L4 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 12L20 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <svg class="w-12 h-12 text-[#E7EFC7]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 60V12M32 12L44 24M32 12L20 24M40 34L52 42M40 34L28 30M24 34L12 42M24 34L36 30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <h1 class="text-5xl md:text-6xl font-pixel text-[#3B3B1A]">
+            <h1 class="text-5xl md:text-6xl font-pixel text-[#E7EFC7]">
                 cabininfo.net
             </h1>
             <!-- Right pinetree SVG -->
-            <svg class="w-12 h-12 text-[#3B3B1A]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L6 12H10V22H14V12H18L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10 12L4 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 12L20 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <svg class="w-12 h-12 text-[#E7EFC7]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 60V12M32 12L44 24M32 12L20 24M40 34L52 42M40 34L28 30M24 34L12 42M24 34L36 30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </header>
 
@@ -78,7 +84,7 @@
 
             <!-- Sidebar Navigation -->
             <nav class="md:w-1/4 border-inset p-4 h-fit">
-                <h2 class="font-bold text-2xl mb-4 border-b-2 border-[#AEC8A4] pb-2 font-pixel text-[#8A784E]">NAVIGATE</h2>
+                <h2 class="font-bold text-2xl mb-4 border-b-2 border-[#E7EFC7] pb-2 font-pixel text-[#E7EFC7]">NAVIGATE</h2>
                 <ul class="space-y-4 text-lg">
                     <li><a href="index.html" class="font-bold">> home</a></li>
                     <li><a href="gallery.html">> art gallery</a></li>
@@ -90,9 +96,9 @@
                 </ul>
 
                 <!-- Link to Us Button -->
-                <div class="mt-8 pt-4 border-t-2 border-[#AEC8A4]">
-                     <h3 class="font-pixel text-xl text-center mb-2 text-[#8A784E]">Link to Us!</h3>
-                     <img src="https://placehold.co/88x31/3B3B1A/E7EFC7?text=Cabin+Info" alt="Link to Cabin Info" class="mx-auto border-outset">
+                <div class="mt-8 pt-4 border-t-2 border-[#E7EFC7]">
+                     <h3 class="font-pixel text-xl text-center mb-2 text-[#E7EFC7]">Link to Us!</h3>
+                     <img src="https://placehold.co/88x31/E7EFC7/3B3B1A?text=Cabin+Info" alt="Link to Cabin Info" class="mx-auto border-outset">
                 </div>
             </nav>
 
@@ -102,8 +108,8 @@
                 <!-- Blog Post Article -->
                 <article class="mb-8">
                     <header>
-                        <h2 class="text-3xl font-bold mb-2 font-pixel text-[#8A784E]">Getting ready for arts in the park</h2>
-                        <p class="text-sm text-gray-500 mb-4">Posted on: 7/28/2025</p>
+                        <h2 class="text-3xl font-bold mb-2 font-pixel text-[#3B3B1A]">Getting ready for arts in the park</h2>
+                        <p class="text-sm text-stone-600 mb-4">Posted by Kenny on: 7/28/2025</p>
                     </header>
                     <div class="prose max-w-none text-lg space-y-4 text-[#3B3B1A]">
                         <p>
@@ -116,7 +122,7 @@
                     </div>
                 </article>
 
-                <hr class="border-[#AEC8A4] my-6">
+                <hr class="border-[#8A784E] my-6">
 
                 <!-- You can add more <article> blocks here for new posts -->
 
@@ -128,7 +134,7 @@
         <footer class="text-center mt-8 p-4 border-outset">
             <!-- Webring Section -->
             <div class="mb-6 border-inset p-3">
-                <h3 class="font-pixel text-xl text-[#8A784E]">~*~ Join Our Webring ~*~</h3>
+                <h3 class="font-pixel text-xl text-[#E7EFC7]">~*~ Join Our Webring ~*~</h3>
                 <p class="text-sm my-2">Part of the <a href="#">DIY Art Collective Webring</a>. Explore other cool sites!</p>
                 <div class="flex justify-center items-center gap-4 font-pixel">
                     <a href="#">[<< PREV]</a>
@@ -142,7 +148,7 @@
             <div class="inline-block bg-black text-white text-2xl font-mono p-2 rounded my-2 border-2 border-gray-700">
                 <span id="visitor-count">0001337</span>
             </div>
-            <p class="text-sm mt-2 text-[#8A784E]">&copy; 1996-2025 Cabin Info. All rights reserved.</p>
+            <p class="text-sm mt-2 text-[#E7EFC7] opacity-75">&copy; 1996-2025 Cabin Info. All rights reserved.</p>
         </footer>
 
     </div>
